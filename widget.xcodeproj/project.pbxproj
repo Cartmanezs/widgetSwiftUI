@@ -26,6 +26,9 @@
 		CEC16B5425C21E4200F7B367 /* BatteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B5225C21E4200F7B367 /* BatteryViewModel.swift */; };
 		CEC16BAF25C2B96100F7B367 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BAE25C2B96100F7B367 /* Date.swift */; };
 		CEC16BB025C2B96100F7B367 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BAE25C2B96100F7B367 /* Date.swift */; };
+		CEC16BC225C2CA2C00F7B367 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B4A25C1EB3700F7B367 /* Courgette-Regular.ttf */; };
+		CEC16BC525C2CA2F00F7B367 /* SF-Pro-Rounded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B4825C1EB3600F7B367 /* SF-Pro-Rounded-Regular.ttf */; };
+		CEC16BC825C2CA3200F7B367 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEC16B4925C1EB3700F7B367 /* SF-Pro-Display-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,24 +154,16 @@
 			children = (
 				CEC16B1325C17FAB00F7B367 /* task_Widget.swift */,
 				CEC16B1525C17FAB00F7B367 /* task_Widget.intentdefinition */,
-				CEC16B1625C17FAF00F7B367 /* Assets.xcassets */,
-				CEC16B4725C1EB2C00F7B367 /* Fonts */,
-				CEC16B1825C17FAF00F7B367 /* Info.plist */,
-				CEC16B4D25C21C9700F7B367 /* Font.swift */,
 				CEC16B5225C21E4200F7B367 /* BatteryViewModel.swift */,
+				CEC16B1625C17FAF00F7B367 /* Assets.xcassets */,
 				CEC16BAE25C2B96100F7B367 /* Date.swift */,
-			);
-			path = "task Widget";
-			sourceTree = "<group>";
-		};
-		CEC16B4725C1EB2C00F7B367 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
+				CEC16B4D25C21C9700F7B367 /* Font.swift */,
 				CEC16B4925C1EB3700F7B367 /* SF-Pro-Display-Bold.otf */,
 				CEC16B4A25C1EB3700F7B367 /* Courgette-Regular.ttf */,
 				CEC16B4825C1EB3600F7B367 /* SF-Pro-Rounded-Regular.ttf */,
+				CEC16B1825C17FAF00F7B367 /* Info.plist */,
 			);
-			path = Fonts;
+			path = "task Widget";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC16BC525C2CA2F00F7B367 /* SF-Pro-Rounded-Regular.ttf in Resources */,
+				CEC16BC225C2CA2C00F7B367 /* Courgette-Regular.ttf in Resources */,
+				CEC16BC825C2CA3200F7B367 /* SF-Pro-Display-Bold.otf in Resources */,
 				CEC16B1725C17FAF00F7B367 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

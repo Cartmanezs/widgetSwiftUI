@@ -9,11 +9,11 @@ import Foundation
 
 extension Date {
     func getTodayWeekDay()-> String{
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "EEEE"
-            let weekDay = dateFormatter.string(from: Date())
-            return weekDay
-      }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let weekDay = dateFormatter.string(from: Date())
+        return weekDay
+    }
     
     func monthAsString() -> String {
         let df = DateFormatter()
