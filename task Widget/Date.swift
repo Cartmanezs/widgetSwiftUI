@@ -8,23 +8,12 @@
 import Foundation
 
 extension Date {
-    
-    var dayofTheWeek: String {
-        let dayNumber = Calendar.current.component(.weekday, from: self)
-        return daysOfTheWeek[dayNumber - 1]
-    }
-    
-    private var daysOfTheWeek: [String] {
-        return [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-        ]
-    }
+    func getTodayWeekDay()-> String{
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE"
+            let weekDay = dateFormatter.string(from: Date())
+            return weekDay
+      }
     
     func monthAsString() -> String {
         let df = DateFormatter()

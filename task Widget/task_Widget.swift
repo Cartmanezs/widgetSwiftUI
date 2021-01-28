@@ -63,19 +63,6 @@ struct task_WidgetEntryView : View {
             self.batteryVM.stopMonitor()
         }
     }
-    
-    func timeConversion24(time12: String) -> String {
-        let dateAsString = time12
-        let df = DateFormatter()
-        df.dateFormat = "hh:mm:ssa"
-        
-        let date = df.date(from: dateAsString)
-        df.dateFormat = "HH:mm:ss"
-        
-        let time24 = df.string(from: date!)
-        print(time24)
-        return time24
-    }
 }
 
 extension task_WidgetEntryView {
@@ -92,11 +79,10 @@ extension task_WidgetEntryView {
     }
     
     var day: some View {
-        Text(Date().dayofTheWeek)
+        Text(Date().getTodayWeekDay())
             .foregroundColor(.white)
             .font(dayTextFont)
             .padding(family == .systemLarge ? 10 : 0 )
-        
     }
     
     var batteryStatusView: some View {
