@@ -88,8 +88,8 @@ extension task_WidgetEntryView {
     var batteryStatusView: some View {
         ZStack {
             Image("battery")
-            Text("\(batteryVM.remain)")
-                .font(.system(size: 12))
+            Text(batteryVM.remain)
+                .font(.system(size: 10))
         }
     }
     
