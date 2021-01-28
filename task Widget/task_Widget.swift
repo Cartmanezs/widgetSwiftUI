@@ -79,14 +79,20 @@ struct task_WidgetEntryView : View {
 }
 
 extension task_WidgetEntryView {
+
     var headerDate: some View {
-        Text("29 November")
+        HStack {
+        let calendar = Calendar.current
+        let weekday  = calendar.component(.day, from: Date())
+
+        Text("\(weekday) \(Date().monthAsString())")
             .foregroundColor(.white)
             .font(family == .systemLarge ? .sfProDisplayBold(size: 26) : .sfProDisplayBold(size: 18))
+        }
     }
     
     var day: some View {
-        Text("Wednesday")
+        Text(Date().dayofTheWeek)
             .foregroundColor(.white)
             .font(dayTextFont)
             .padding(family == .systemLarge ? 10 : 0 )
@@ -97,7 +103,7 @@ extension task_WidgetEntryView {
         ZStack {
             Image("battery")
             Text("\(batteryVM.remain)")
-                .font(.system(size: 9))
+                .font(.system(size: 12))
         }
     }
     
@@ -139,7 +145,7 @@ extension task_WidgetEntryView {
                     Spacer()
                     batteryStatusView
                 }
-                .padding(.bottom, -22)
+                .padding(.bottom, -25)
             }
             Spacer()
                 .frame(height: heightSpacerFrame)

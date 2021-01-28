@@ -24,6 +24,8 @@
 		CEC16B4F25C21C9700F7B367 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B4D25C21C9700F7B367 /* Font.swift */; };
 		CEC16B5325C21E4200F7B367 /* BatteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B5225C21E4200F7B367 /* BatteryViewModel.swift */; };
 		CEC16B5425C21E4200F7B367 /* BatteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16B5225C21E4200F7B367 /* BatteryViewModel.swift */; };
+		CEC16BAF25C2B96100F7B367 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BAE25C2B96100F7B367 /* Date.swift */; };
+		CEC16BB025C2B96100F7B367 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC16BAE25C2B96100F7B367 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,7 @@
 		CEC16B4A25C1EB3700F7B367 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
 		CEC16B4D25C21C9700F7B367 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CEC16B5225C21E4200F7B367 /* BatteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewModel.swift; sourceTree = "<group>"; };
+		CEC16BAE25C2B96100F7B367 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,7 @@
 				CEC16B1825C17FAF00F7B367 /* Info.plist */,
 				CEC16B4D25C21C9700F7B367 /* Font.swift */,
 				CEC16B5225C21E4200F7B367 /* BatteryViewModel.swift */,
+				CEC16BAE25C2B96100F7B367 /* Date.swift */,
 			);
 			path = "task Widget";
 			sourceTree = "<group>";
@@ -270,6 +274,7 @@
 			files = (
 				CE5BC90025C179640026FABE /* AppDelegate.swift in Sources */,
 				CE5BC90225C179640026FABE /* SceneDelegate.swift in Sources */,
+				CEC16BAF25C2B96100F7B367 /* Date.swift in Sources */,
 				CEC16B5325C21E4200F7B367 /* BatteryViewModel.swift in Sources */,
 				CEC16B4E25C21C9700F7B367 /* Font.swift in Sources */,
 				CE5BC90425C179640026FABE /* ContentView.swift in Sources */,
@@ -282,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC16B5425C21E4200F7B367 /* BatteryViewModel.swift in Sources */,
+				CEC16BB025C2B96100F7B367 /* Date.swift in Sources */,
 				CEC16B1425C17FAB00F7B367 /* task_Widget.swift in Sources */,
 				CEC16B1925C17FAF00F7B367 /* task_Widget.intentdefinition in Sources */,
 				CEC16B4F25C21C9700F7B367 /* Font.swift in Sources */,
