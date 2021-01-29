@@ -23,6 +23,7 @@ struct Provider: IntentTimelineProvider {
         var entries: [SimpleEntry] = []
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        #warning("Widget will not update with this pattern, need to update widget every minute")
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
@@ -40,6 +41,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
+#warning("Naming - camel case and not capitilized https://google.github.io/swift/#file-names")
 struct task_WidgetEntryView : View {
     @Environment(\.widgetFamily) var family
     @Environment(\.colorScheme) var scheme
@@ -47,6 +49,7 @@ struct task_WidgetEntryView : View {
     
     var entry: Provider.Entry
     
+    #warning("Check ui on other iPhone sizes, it layouts wrong (iPhone XR)")
     var body: some View {
         ZStack {
             Image("background")
@@ -66,15 +69,16 @@ struct task_WidgetEntryView : View {
 }
 
 extension task_WidgetEntryView {
-
+    
     var headerDate: some View {
         HStack {
-        let calendar = Calendar.current
-        let weekday  = calendar.component(.day, from: Date())
-
-        Text("\(weekday) \(Date().monthAsString())")
-            .foregroundColor(.white)
-            .font(family == .systemLarge ? .sfProDisplayBold(size: 26) : .sfProDisplayBold(size: 18))
+            let calendar = Calendar.current
+            #warning("Need to use date from entry not current date")
+            let weekday  = calendar.component(.day, from: Date())
+            
+            Text("\(weekday) \(Date().monthAsString())")
+                .foregroundColor(.white)
+                .font(family == .systemLarge ? .sfProDisplayBold(size: 26) : .sfProDisplayBold(size: 18))
         }
     }
     
@@ -144,6 +148,7 @@ extension task_WidgetEntryView {
 // MARK: - Computed Properties
 extension task_WidgetEntryView {
     var dayTextFont: Font {
+        #warning("switch warnings")
         switch self.family{
         case .systemLarge:
             return .courgetteRegular(size: 44)
@@ -155,6 +160,7 @@ extension task_WidgetEntryView {
     }
     
     var timeTextFont: Font {
+        #warning("switch warnings")
         switch self.family{
         case .systemLarge:
             return .sfProRoundedRegular(size: 180)
@@ -166,6 +172,7 @@ extension task_WidgetEntryView {
     }
     
     var heightSpacerFrame: CGFloat {
+        #warning("switch warnings")
         switch self.family{
         case .systemLarge:
             return 260
@@ -177,10 +184,12 @@ extension task_WidgetEntryView {
     }
 }
 
+#warning("Naming - camel case and not capitilized https://google.github.io/swift/#file-names")
 @main
 struct task_Widget: Widget {
     let kind: String = "task_Widget"
     
+    #warning("why do you use intent for this widget?")
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             task_WidgetEntryView(entry: entry)

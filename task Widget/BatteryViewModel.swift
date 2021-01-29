@@ -11,6 +11,7 @@ class BatteryViewModel: ObservableObject {
     @Published var status: UIDevice.BatteryState = .unknown
     @Published var remain = ""
     
+    #warning("NotificationCenter do not working in widget, it does not work")
     func startMonitor() {
         NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelChanged(notification:)), name: UIDevice.batteryLevelDidChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(batteryStateChanged(notification:)), name: UIDevice.batteryStateDidChangeNotification, object: nil)
